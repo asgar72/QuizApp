@@ -8,8 +8,9 @@
     tools:context=".MainActivity1">
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +33,7 @@
                     android:id="@+id/imageView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@tools:sample/avatars"
+
                     app:srcCompat="@drawable/profile" />
 
                 <TextView
@@ -61,7 +62,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@tools:sample/avatars"
+
                         app:srcCompat="@drawable/garnet" />
 
                     <TextView
@@ -70,7 +71,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
                         android:layout_marginEnd="4dp"
-                        android:text="TextView"
+                        android:text="255"
                         android:textColor="@color/white" />
 
                     <ImageView
@@ -78,7 +79,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@tools:sample/avatars"
                         app:srcCompat="@drawable/plus" />
 
                     <TextView
@@ -86,7 +86,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="TextView" />
+                        android:text="" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -109,8 +109,7 @@
                         android:id="@+id/imageView7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@tools:sample/avatars"
-                        tools:srcCompat="@drawable/btn1" />
+                        app:srcCompat="@drawable/btn1" />
 
                     <TextView
                         android:id="@+id/textView7"
@@ -137,8 +136,7 @@
                         android:id="@+id/imageView8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@tools:sample/avatars"
-                        tools:srcCompat="@drawable/btn2" />
+                        app:srcCompat="@drawable/btn2" />
 
                     <TextView
                         android:id="@+id/textView8"
@@ -164,8 +162,7 @@
                         android:id="@+id/imageView9"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@tools:sample/avatars"
-                        tools:srcCompat="@drawable/btn3" />
+                        app:srcCompat="@drawable/btn3" />
 
                     <TextView
                         android:id="@+id/textView9"
@@ -356,10 +353,9 @@
                     android:id="@+id/imageView14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@tools:sample/avatars"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    tools:srcCompat="@drawable/coins" />
+                    app:srcCompat="@drawable/coins" />
 
                 <TextView
                     android:id="@+id/textView13"
@@ -388,5 +384,20 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>
+
+    <com.ismaeldivita.chipnavigation.ChipNavigationBar
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        app:cnb_iconSize="20dp"
+        app:cnb_menuResource="@menu/bottom_menu"
+        app:cnb_orientationMode="horizontal"
+        app:cnb_radius="50dp"
+        app:cnb_unselectedColor="#757575"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

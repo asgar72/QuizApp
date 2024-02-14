@@ -2,10 +2,21 @@ package com.asgar72.quizapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Window
+import androidx.core.content.ContextCompat
+import com.asgar72.quizapp.databinding.ActivityMain1Binding
 
 class MainActivity1 : AppCompatActivity() {
+    lateinit var binding: ActivityMain1Binding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main1)
+        binding = ActivityMain1Binding.inflate(layoutInflater)
+        setContentView(binding.root)
+        supportActionBar?.hide()
+
+        val window:Window=this@MainActivity1.window
+        window.statusBarColor=ContextCompat.getColor(this@MainActivity1,R.color.grey)
+
+
     }
 }
