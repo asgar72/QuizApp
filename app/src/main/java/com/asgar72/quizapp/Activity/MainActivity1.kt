@@ -1,5 +1,6 @@
 package com.asgar72.quizapp.Activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Window
@@ -17,6 +18,16 @@ class MainActivity1 : AppCompatActivity() {
 
         val window:Window=this@MainActivity1.window
         window.statusBarColor=ContextCompat.getColor(this@MainActivity1, R.color.grey)
+
+        binding.apply {
+            bottomMenu.setItemSelected(R.id.home)
+            bottomMenu.setOnItemSelectedListener {
+                if (it == R.id.Board){
+                    startActivity(Intent(this@MainActivity1,LeaderActivity::class.java))
+                    finish()
+                }
+            }
+        }
 
 
     }
