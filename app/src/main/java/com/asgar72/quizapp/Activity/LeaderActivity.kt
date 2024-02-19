@@ -39,7 +39,7 @@ class LeaderActivity : AppCompatActivity() {
 
             Glide.with(root.context)
                 .load(drawableResourceId1)
-                .load(pic1)
+                .into(pic1)
 
             val drawableResourceId2: Int = binding.root.resources.getIdentifier(
                 loadData().get(1).pic, "drawable", binding.root.context.packageName
@@ -47,7 +47,7 @@ class LeaderActivity : AppCompatActivity() {
 
             Glide.with(root.context)
                 .load(drawableResourceId2)
-                .load(pic2)
+                .into(pic2)
 
             val drawableResourceId3: Int = binding.root.resources.getIdentifier(
                 loadData().get(2).pic, "drawable", binding.root.context.packageName
@@ -55,7 +55,7 @@ class LeaderActivity : AppCompatActivity() {
 
             Glide.with(root.context)
                 .load(drawableResourceId3)
-                .load(pic3)
+                .into(pic3)
 
             bottomMenu.setItemSelected(R.id.Board)
             bottomMenu.setOnItemSelectedListener {
