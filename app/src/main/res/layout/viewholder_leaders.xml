@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="70dp"
     android:layout_margin="8dp"
+    android:background="@drawable/white_background"
     android:elevation="3dp"
-    android:gravity="center"
-    android:background="@drawable/white_background">
+    android:gravity="center">
 
     <TextView
         android:id="@+id/rowText"
@@ -51,6 +51,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:textColor="@color/nav_blue"
-        android:text="0000" />
+        android:text="0000"
+        android:textColor="@color/nav_blue" />
 </LinearLayout>

@@ -25,12 +25,9 @@ class LeaderAdapter : RecyclerView.Adapter<LeaderAdapter.ViewHolder>() {
         binding.titleTxt.text = differ.currentList[position].name
 
         val drawableResourceId: Int = binding.root.resources.getIdentifier(
-            differ.currentList[position].pic,
-            "drawable", binding.root.context.packageName
+            differ.currentList[position].pic, "drawable", binding.root.context.packageName
         )
-        Glide.with(binding.root.context)
-            .load(drawableResourceId)
-            .into(binding.pic)
+        Glide.with(binding.root.context).load(drawableResourceId).into(binding.pic)
 
         binding.rowText.text = (position + 4).toString()
         binding.scoreTxt.text = differ.currentList[position].score.toString()
